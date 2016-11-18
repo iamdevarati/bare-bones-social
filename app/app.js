@@ -1,7 +1,9 @@
 angular.module('Social',['ui.router'])
 	.config(function($stateProvider, $urlRouterProvider){
+		//define default route
 		$urlRouterProvider.otherwise('/');
 		
+		//define each route in the app
 		$stateProvider
 			.state('home',{
 				url: "/",

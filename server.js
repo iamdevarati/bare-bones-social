@@ -16,14 +16,14 @@ app.get('/', function(req, res){
 	res.sendfile('index.html');
 });
 
-//authentication
+//authentication routes
 app.post('/api/user/signup', authenticationController.signup);
 app.post('/api/user/login', authenticationController.login);
 
-//feed
+//feed routes
 app.get('/api/feed', feedController.getFeed);
 app.post('/api/feed', feedController.postFeed);
 
 app.listen('3000', function(){
-	console.log("Listening");
+	console.log("Listening on port 3000");
 });
