@@ -4,12 +4,11 @@ var Post = require('../datasets/posts');
 module.exports.getFeed =  function (req, res) {
 	Post.find({}, function(err, result){
 		if(err){
-				console.log("Error getting feed");
-			}
-			if(result){
-				console.log(JSON.stringify(result));
-				res.json(result);
-			}
+			console.log("Error getting feed");
+		}
+		if(result){
+			res.json(result);
+		}
 	});
 }
 
